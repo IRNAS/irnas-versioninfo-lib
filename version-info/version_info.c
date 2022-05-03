@@ -1,3 +1,5 @@
+#include <zephyr.h>
+
 #include <version_info.h>
 
 #include "generated/generated_version_info.h"
