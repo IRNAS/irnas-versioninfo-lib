@@ -1,0 +1,22 @@
+# COPYRIGHT NOTICE: (c) 2022 Irnas. All rights reserved.
+
+menuconfig VERSION_INFO
+	bool "version information"
+	help
+      Enable version information library that uses git to autogenerate
+      information about app version, git hash, kernel version and other.
+
+
+if VERSION_INFO
+
+config VERSION_INFO_APP_BUILD_TYPE
+	string "Application build type"
+	default "unknown"
+	help
+        Provides information about build type, it should be set in the .conf file.
+
+module = VERSION_INFO
+module-str = Version Info
+source "subsys/logging/Kconfig.template.log_config"
+
+endif # VERSION_INFO
