@@ -19,7 +19,7 @@ static const struct version_info prv_version = {
     .build_type   = CONFIG_VERSION_INFO_APP_BUILD_TYPE,
 };
 
-const struct version_info *version_info(void)
+const struct version_info *version_info_get(void)
 {
     return &prv_version;
 }

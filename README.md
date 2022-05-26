@@ -27,7 +27,7 @@ https://github.com/andrew-hardin/cmake-git-version-tracking.
       repo-path: irnas-versioninfo-lib
       path: irnas/irnas-versioninfo-lib
       remote: irnas
-      revision: v1.0.0
+      revision: v1.0.1
     ```
 
 ## How to use this module
