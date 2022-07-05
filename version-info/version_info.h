@@ -19,17 +19,17 @@ extern "C" {
  */
 
 struct version_info {
-    uint8_t major;
-    uint8_t minor;
-    uint8_t patch;
-    /* Wether the build contains uncommitted changes */
-    bool dirty;
-    /* Output of git describe --always */
-    char hash[9];
-    /* Provided by Kconfig option, it should be set in .conf file */
-    char build_type[20];
-    /* Output of git describe --tags --always --long --dirty=+ */
-    char git_describe[30];
+	uint8_t major;
+	uint8_t minor;
+	uint8_t patch;
+	/* Wether the build contains uncommitted changes */
+	bool dirty;
+	/* Output of git describe --always */
+	char hash[9];
+	/* Provided by Kconfig option, it should be set in .conf file */
+	char build_type[20];
+	/* Output of git describe --tags --always --long --dirty=+ */
+	char git_describe[30];
 };
 
 /**
