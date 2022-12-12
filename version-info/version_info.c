@@ -1,9 +1,10 @@
 #include "generated/generated_version_info.h"
 
-#include <logging/log.h>
+#include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
+
 #include <ncs_version.h>
 #include <version_info.h>
-#include <zephyr.h>
 
 LOG_MODULE_REGISTER(version_info, CONFIG_VERSION_INFO_LOG_LEVEL);
 

@@ -1,7 +1,8 @@
 
-#include <logging/log.h>
+#include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
+
 #include <version_info.h>
-#include <zephyr.h>
 
 LOG_MODULE_REGISTER(main);
 
