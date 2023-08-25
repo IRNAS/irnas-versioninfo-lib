@@ -1,0 +1,9 @@
+samples:
+  - name: basic
+    west-boards:
+      - native_posix
+
+    build-types:
+      - type: debug
+        conf-files:
+          - debug.conf
