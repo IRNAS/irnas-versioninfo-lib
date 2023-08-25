@@ -1,1 +1,1 @@
-add_subdirectory(version-info)
+add_subdirectory(lib)

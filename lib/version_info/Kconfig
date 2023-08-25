@@ -4,7 +4,7 @@ menuconfig VERSION_INFO
 	bool "version information"
 	help
       Enable version information library that uses git to autogenerate
-      information about app version, git hash, kernel version and other.
+      information about app version, git hash, kernel version and other stuff.
 
 
 if VERSION_INFO
