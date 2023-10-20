@@ -15,10 +15,13 @@ static const struct version_info prv_version = {
 	.dirty = VERSION_INFO_DIRTY,
 	.hash = VERSION_INFO_HASH,
 	.git_describe = VERSION_INFO_GIT_DESCRIBE,
-	.build_type = CONFIG_VERSION_INFO_APP_BUILD_TYPE,
+	.build_type = VERSION_INFO_BUILD_TYPE,
 };
 
-const struct version_info *version_info_get(void) { return &prv_version; }
+const struct version_info *version_info_get(void)
+{
+	return &prv_version;
+}
 
 void version_info_print(void)
 {

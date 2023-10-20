@@ -1,4 +1,9 @@
-samples:
-  - name: basic
+apps:
+  - name: with_east
     west-boards:
       - native_posix
+
+    build-types:
+      - type: debug
+        conf-files:
+          - debug.conf

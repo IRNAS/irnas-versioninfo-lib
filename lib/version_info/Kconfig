@@ -4,16 +4,36 @@ menuconfig VERSION_INFO
 	bool "version information"
 	help
       Enable version information library that uses git to autogenerate
-      information about app version, git hash, kernel version and other stuff.
+      information about app version, git hash, kernel version and other.
 
 
 if VERSION_INFO
 
+choice
+	prompt "Source of build type"
+	default VERSION_INFO_APP_BUILD_TYPE_EAST
+
+config VERSION_INFO_APP_BUILD_TYPE_USER
+	bool "Use build type set by user"
+	help
+        If true, the string in VERSION_INFO_APP_BUILD_TYPE is passed to version
+        information library as the build type.
+
+
+config VERSION_INFO_APP_BUILD_TYPE_EAST
+	bool "Use build type set by East"
+	help
+        If true, the content of EAST_BUILD_TYPE that is emmited by East tool is
+        passed to version information library as the build type.
+
+endchoice
+
 config VERSION_INFO_APP_BUILD_TYPE
 	string "Application build type"
-	default "unknown"
+    depends on VERSION_INFO_APP_BUILD_TYPE_USER
 	help
-        Provides information about build type, it should be set in the .conf file.
+        Provides information about build type, it should be set in the .conf
+        file.
 
 module = VERSION_INFO
 module-str = Version Info
