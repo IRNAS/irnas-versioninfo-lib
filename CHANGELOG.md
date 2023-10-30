@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
+## [1.2.0] - 2023-10-30
+
 This is the first release done with the CI release process.
 
 ### Added
@@ -16,8 +18,11 @@ This is the first release done with the CI release process.
     the build type.
 -   CI infrastructure was updated.
 
-
 ### Changed
 
 -   Project structure. This library now uses the most recent project structure 
     from our irnas-zephyr-template.
+
+[Unreleased]: https://github.com/IRNAS/irnas-versioninfo-lib/compare/v1.2.0...HEAD
+
+[1.2.0]: https://github.com/IRNAS/irnas-versioninfo-lib/compare/66a0a2bcbc21f67f312538d29041a0319c90612c...v1.2.0
