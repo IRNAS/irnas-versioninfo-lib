@@ -44,6 +44,36 @@ CONFIG_VERSION_INFO=y
 You can now include header file in the source file of your choice and start
 using its functions.
 
+### Build type
+
+User can specify what kind of build type is used for the project being built.
+Build type is available as a `.build_type`, a member of the `version_info`
+struct.
+
+Build type can be either set manually in a KConfig file or automatically with
+[East].
+
+> [!Note] 
+> Both examples are show in this repository, inside the `app` folder.
+
+[east]: https://github.com/IRNAS/irnas-east-software
+
+#### Setting it manually
+
+Place below two lines in a `prj.conf` file. `.build_type` is now set to
+`"basic"`.
+
+```Kconfig
+CONFIG_VERSION_INFO_APP_BUILD_TYPE_USER=y
+CONFIG_VERSION_INFO_APP_BUILD_TYPE="basic"
+```
+
+#### Setting it automatically
+
+Place your project into `east.yml` file. Refer to the East's documentation on
+how to do that. East will provide build type via `EAST_BUILD_TYPE` define.
+Version info library picks up this define and places it into the code.
+
 ## Expanding the module
 
 If you want to add more git related strings to this module you will have to do
