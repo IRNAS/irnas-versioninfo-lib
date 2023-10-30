@@ -22,22 +22,27 @@
 # <project_name>/project.
 
 install-dep:
-	pip install -r scripts/requirements.txt
-	east sys-setup
+	east install nrfutil-toolchain-manager
 	# Below line is needed, as the toolchain manager might be cached in CI, but not configured
-	~/.local/share/east/nrfutil-toolchain-manager.exe config --install-dir ~/.local/share/east
+	~/.local/share/east/tooling/nrfutil/nrfutil-toolchain-manager.exe config --install-dir ~/.local/share/east
 
 project-setup:
 	# Make a West workspace around this project
-	west init -l .
+	east init -l .
 	# Use a faster update method
-	west update -o=--depth=1 -n
-	east update toolchain
+	east update -o=--depth=1 -n
+	east install toolchain
 
 pre-build:
 	echo "Pre-build"
 
-build:
+# Runs on every push to the main branch
+quick-build:
+	east build -b nrf52840dk_nrf52840 app/basic -d basic_build
+	east build -b nrf52840dk_nrf52840 app/with_east -d with_east_build
+
+# Runs on every PR and when doing releases
+release:
 	# Change east.yml to control what is built.
 	east release
 
