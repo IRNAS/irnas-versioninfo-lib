@@ -6,7 +6,7 @@
 
 LOG_MODULE_REGISTER(main);
 
-void main(void)
+int main(void)
 {
 	LOG_INF("Basic version info sample started");
 
@@ -34,4 +34,6 @@ void main(void)
 
 	/* The full result of the git describe command */
 	LOG_INF("git_describe: %s", vi->git_describe);
+
+	return 0;
 }
