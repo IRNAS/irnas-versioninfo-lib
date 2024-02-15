@@ -15,18 +15,18 @@ https://github.com/andrew-hardin/cmake-git-version-tracking.
 1. To your `west.yml` add the `irnas` remote to the `remotes` section:
 
    ```yaml
-   - name: irnas
-     url-base: https://github.com/irnas
+   - name: ba-rd-ais
+     url-base: https://code.bbraun.io/ba-rd-ais
    ```
 
 2. Then in the `projects` section add below snippet at the bottom. You need to
    manually select `revision`.
 
    ```yaml
-   - name: irnas-versioninfo-lib
-     repo-path: irnas-versioninfo-lib
-     path: irnas/irnas-versioninfo-lib
-     remote: irnas
+   - name: versioninfo-lib
+     repo-path: versioninfo-lib
+     path: ba-rd-ais/versioninfo-lib
+     remote: ba-rd-ais
      revision: <revision>
    ```
 
@@ -53,8 +53,7 @@ struct.
 Build type can be either set manually in a KConfig file or automatically with
 [East].
 
-> [!Note] 
-> Both examples are show in this repository, inside the `app` folder.
+> [!Note] Both examples are show in this repository, inside the `app` folder.
 
 [east]: https://github.com/IRNAS/irnas-east-software
 
