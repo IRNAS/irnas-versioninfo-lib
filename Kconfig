@@ -1,5 +1,1 @@
-menu "irnas-versioninfo-lib"
-
 rsource "lib/Kconfig"
-
-endmenu
